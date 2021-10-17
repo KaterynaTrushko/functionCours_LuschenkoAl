@@ -236,7 +236,7 @@ document.querySelector('.b-12').addEventListener('click', function () {
 const out13 = document.querySelector('.out-13');
 
 function t13(arr, funcArg) {
-
+    funcArg(arr);
 }
 
 // функции для вывода уже заготовлены
@@ -249,31 +249,32 @@ function showArrUnderscore(arr) {
 }
 
 document.querySelector('.b-13').addEventListener('click', function () {
-    t13([3, 4, 5], showArrSpace);
+    t13([3, 4, 5], showArrUnderscore);
     // попробуйте также вместо showArrSpace поставить showArrUnderscore
 })
 
 
 // Task 14
-// Напишите функцию, t14, которая выводит в блок block (переданный как аргумент) массив (переданный как аргумент arr) c помощью функции funcArg (переданной как аргумент).
+// Напишите функцию, t14, которая выводит в блок block (переданный как аргумент) массив (переданный как аргумент arr) 
+// c помощью функции funcArg (переданной как аргумент).
 
 const out14 = document.querySelector('.out-14');
 
 function t14(arr, funcArg, block) {
-
+    funcArg(arr, block);
 }
 
 // функции для вывода уже заготовлены
 function showArrSpace2(arr, block) {
-    // вывод в блок пишите как в предыдущем примере
+    out14.innerHTML = arr.join('_');
 }
 
 function showArrUnderscore2(arr, block) {
-    // вывод в блок пишите как в предыдущем примере
+    out14.innerHTML = arr.join('_');
 }
 
 document.querySelector('.b-14').addEventListener('click', function () {
-    t14([3, 4, 5], showArrSpace, out14);
+    t14([3, 4, 5], showArrSpace2, out14);
     // попробуйте также вместо showArrSpace2 поставить showArrUnderscore2
 })
 
@@ -284,6 +285,11 @@ document.querySelector('.b-14').addEventListener('click', function () {
 const out15 = document.querySelector('.out-15');
 
 function t15(num, even, odd) {
+    if(num % 2 == 0){
+        even();
+    } else{
+        odd();
+    }
 
 }
 
