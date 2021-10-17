@@ -285,11 +285,11 @@ document.querySelector('.b-14').addEventListener('click', function () {
 const out15 = document.querySelector('.out-15');
 
 function t15(num, even, odd) {
-    if(num % 2 == 0){
+    if(num % 2){
         even();
     } else{
-        odd();
-    }
+        odd();   
+     }
 
 }
 

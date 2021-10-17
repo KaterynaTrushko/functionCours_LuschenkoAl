@@ -21,7 +21,7 @@ let min = 888;
 let max = 900;
 
 function getRandomInt2() {
-    let res = Math.floor(Math.random() * (max - min + 1) + max);
+    let res = Math.floor(Math.random() * (max - min + 1) + min);
     return res;
 }
 
@@ -99,7 +99,7 @@ function even() {
 function t5() {
     let num = document.querySelector('.i-5').value;
     if (num % 2 == 0) {
-        odd();
+        even();
     } else {
         odd();
     }
@@ -174,12 +174,11 @@ function showNumber() {
 }
 
 function t8() {
-    if (z8 == 9) {
-        z8 = 0;
-    } else {
+    while( z8 <= 9){
         z8++;
         showNumber()
     }
+    z = 0;
 }
 
 document.querySelector('.b-8').addEventListener('click', t8);
